@@ -1,4 +1,4 @@
-package test.datastructure.linkedlist.singlelinkedlist.insertdelete;
+package datastructure.linkedlist.singlelinkedlist.insertdelete;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package test.datastructure.linkedlist.singlelinkedlist.insertdelete;
+package datastructure.linkedlist.singlelinkedlist.insertdelete;
 
 public class SingleLinkedList {
 

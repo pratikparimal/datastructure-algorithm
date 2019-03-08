@@ -1,4 +1,4 @@
-package test.datastructure.matrix2d;
+package datastructure.matrix2d;
 
 public class Rotate2Dmatrix {
     static void reverseColumns(int arr[][])

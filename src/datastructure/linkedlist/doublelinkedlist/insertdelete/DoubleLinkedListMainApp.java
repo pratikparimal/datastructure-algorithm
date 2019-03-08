@@ -1,4 +1,4 @@
-package test.datastructure.linkedlist.doublelinkedlist.insertdelete;
+package datastructure.linkedlist.doublelinkedlist.insertdelete;
 
 public class DoubleLinkedListMainApp {
 
