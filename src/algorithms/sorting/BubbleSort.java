@@ -15,7 +15,7 @@ public class BubbleSort {
         sorted_array = sort.optimizedBubbleSort(unsorted_array);
         System.out.print("Optimized Bubble Sorted : ");
         sort.printArray(sorted_array);
-        sorted_array = sort.optimizedBubbleSort(unsorted_array);
+        sorted_array = sort.recursiveBubbleSort(unsorted_array, unsorted_array.length);
         System.out.print("Recursive Bubble Sorted : ");
         sort.printArray(sorted_array);
     }
