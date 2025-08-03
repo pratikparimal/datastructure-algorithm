@@ -3,8 +3,6 @@ package youtube.tree.bt;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import static tree.bt.BinaryTree.createBT;
-
 public class DepthOfBinaryTree {
 
     /**
@@ -47,6 +45,18 @@ public class DepthOfBinaryTree {
             }
         }
         return height;
+    }
+
+    static int index = -1;
+
+    public static BinaryTree.Node createBT(int[] nodes) {
+        index++;
+        if (nodes[index] == -1)
+            return null;
+        BinaryTree.Node newNode = new BinaryTree.Node(nodes[index]);
+        newNode.left = createBT(nodes);
+        newNode.right = createBT(nodes);
+        return newNode;
     }
 
     public static void main(String[] args) {
