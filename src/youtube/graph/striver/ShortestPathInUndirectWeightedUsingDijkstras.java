@@ -32,12 +32,15 @@ public class ShortestPathInUndirectWeightedUsingDijkstras {
 
     private static ArrayList<Integer> shortestPath(int V, int start, ArrayList<ArrayList<Edge>> graph) {
         ArrayList<Integer> resultantPath = new ArrayList<>();
+        //A parent array to keep track of previous node from where curr node have come
         int[] parent = new int[V + 1];
         for (int i = 0; i <= V; i++)
             parent[i] = i;
+        // distance array to keep track of distance of each node from starting node
         int[] distance = new int[V + 1];
         Arrays.fill(distance, (int) 1e9);
         distance[start] = 0;
+        //a min heap queue to insert node
         PriorityQueue<Edge> pq = new PriorityQueue<>((a,b) -> {
             if (a.weight != b.weight) return a.weight - b.weight;
             else return a.node - b.node;
@@ -49,10 +52,11 @@ public class ShortestPathInUndirectWeightedUsingDijkstras {
                 if (curr.weight + adj.weight < distance[adj.node]) {
                     distance[adj.node] = curr.weight + adj.weight;
                     pq.offer(new Edge(adj.node, distance[adj.node]));
-                    parent[adj.node] = curr.node;
+                    parent[adj.node] = curr.node; //keep updating parent node for all adj node
                 }
             }
         }
+        //start traversing from last and backtrack to the starting node to get the path
         int node = V;
         while (parent[node] != node) {
             resultantPath.add(node);
