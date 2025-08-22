@@ -34,7 +34,7 @@ public class NumberOfWaysToArriveAtDestination {
             Edge curr = q.poll();
             int currNode = curr.node;
             int currWeight = curr.weight;
-            //if (currWeight > distance[currNode]) continue;
+            if (currWeight > distance[currNode]) continue;
             for (Edge adj: graph.get(currNode)) {
                 int adjNode = adj.node;
                 int adjWeight = adj.weight;
