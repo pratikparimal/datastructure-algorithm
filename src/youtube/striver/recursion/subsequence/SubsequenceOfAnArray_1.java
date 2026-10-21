@@ -15,7 +15,7 @@ public class SubsequenceOfAnArray_1 {
         //case 1: take
         current.add(arr[index]);
         subsequence(arr, index + 1, current, result);
-        current.remove(current.getLast());
+        current.removeLast();
         // case 2: don't take (we have removed the index in the above line from the current list)
         subsequence(arr, index + 1, current, result);
     }
